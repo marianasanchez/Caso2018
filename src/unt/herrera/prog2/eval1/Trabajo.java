@@ -184,13 +184,13 @@ public class Trabajo {
         System.out.println("Tutores");
         System.out.println("-----------------------");
         for (RolEnTrabajo r: this.listaRolEnTrab)
-            if(r.getUnRol().equals(Rol.TUTOR)||r.getUnRol().equals(Rol.COTUTOR)||r.getUnRol().equals(Rol.EXTERNO))
+            if(r.getUnRol().equals(Rol.TUTOR)||r.getUnRol().equals(Rol.COTUTOR))
                 r.getUnProfesor().mostrar();
         
         System.out.println("Jurado");
         System.out.println("-----------------------");
         for (RolEnTrabajo r: this.listaRolEnTrab)
-            if(r.getUnRol().equals(Rol.JURADO) || r.getUnRol().equals(Rol.EXTERNO))
+            if(r.getUnRol().equals(Rol.JURADO))
                r.getUnProfesor().mostrar();
         
         if(!this.listaSeminarios.isEmpty()){

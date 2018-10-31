@@ -13,5 +13,5 @@ package unt.herrera.prog2.eval1;
  * @author prog2
  */
 public enum Cargo {
-    TITULAR, ASOCIADO, ADJUNTO, JTP, ADG;
+    TITULAR, ASOCIADO, ADJUNTO, JTP, ADG, EXTERNO;
 }

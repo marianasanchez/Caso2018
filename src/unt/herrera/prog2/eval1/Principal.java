@@ -432,7 +432,7 @@ public class Principal {
         listaAl9.add(a91);
         //Profesores en el Trabajo
         RolEnTrabajo rt91= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(3), Rol.TUTOR);
-        RolEnTrabajo rt92= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(4), Rol.EXTERNO);
+        RolEnTrabajo rt92= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(4), Rol.COTUTOR);
         listaR9.add(rt91);
         listaR9.add(rt92);
         
@@ -673,8 +673,8 @@ return t;
         return true;
     }
     public static boolean controlarTutores (ArrayList<RolEnTrabajo> listaR){
-        int cantTutor=0, cantCotutor=0, cantExterno=0;
-        Profesor t=null, c=null, e=null;
+        int cantTutor=0, cantCotutor=0;
+        Profesor t=null, c=null;
         //que la lista tenga datos
         if(listaR.isEmpty()|| listaR == null)
             return false;
@@ -689,33 +689,25 @@ return t;
                     cantTutor++;
                     c=rt.getUnProfesor();
                 }
-                if(rt.getUnRol()== Rol.EXTERNO){
-                    cantExterno++;
-                    e=rt.getUnProfesor();
-                }
+                
             }
             //que haya las cantidades que requiere
-            if(cantTutor ==0)
+            if(cantTutor ==0 || cantTutor >1)
                 return false;
-            if(cantCotutor>1||cantExterno>1)
+            if(cantCotutor>1)
                 return false;
             
             //que no sean iguales
             if(cantCotutor==1 && c.equals(t))
-                return false;
-            
-            if(cantExterno==1 && t.equals(e))
-                return false;
-            
-            if(cantExterno==1 && cantCotutor==1 && c.equals(e))
-                return false;
+                return false;                    
+           
         }
         
         return true;
     }
     public static boolean controlarJurados (ArrayList<RolEnTrabajo> listaR){
         
-        Profesor t=null, c=null, e=null;
+        Profesor t=null, c=null;
         Profesor p1=null, p2=null, p3=null;
         ArrayList<Profesor> listaJurado = new ArrayList<>();
         //que la lista tenga datos
@@ -736,16 +728,12 @@ return t;
                         t= rt.getUnProfesor();
                     if(rt.getUnRol()== Rol.COTUTOR)
                         c=rt.getUnProfesor();
-                    if(rt.getUnRol()== Rol.EXTERNO)
-                        e=rt.getUnProfesor();
                 }
 
                 //que no sean iguales con los tutores
                 if(listaJurado.contains(t))
                     return false;
                 if(listaJurado.contains(c) && c !=null)
-                    return false;
-                if(listaJurado.contains(e) && e !=null)
                     return false;
                 
                 //que no sean iguales entre si

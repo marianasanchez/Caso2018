@@ -14,6 +14,6 @@ package unt.herrera.prog2.eval1;
  * @author PROG2
  */
 public enum Rol {
-    TUTOR , COTUTOR, JURADO, EXTERNO;
+    TUTOR , COTUTOR, JURADO;
     
 }
