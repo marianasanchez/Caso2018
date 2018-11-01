@@ -79,7 +79,8 @@ public class Alumno extends Persona {
     }
 
     public void mostrar(){
-        System.out.println("CX: " +this.getCx() +  " - " + this.getApellido().toUpperCase() + ", " + this.getNombre().toUpperCase());
+        super.mostrar();
+        System.out.println("  CX: " +this.getCx());//() +  " - " + this.getApellido().toUpperCase() + ", " + this.getNombre().toUpperCase());
     }
 
 

@@ -162,19 +162,19 @@ public class Trabajo {
     
     
     public void mostrar(){
-      String t ;
-        t= "Trabajo: " + this.titulo + "\n";
-        t+= "Area(s): " + this.areas() + "\n";
-        t+="Duración: " + this.duracion + " meses \n";
-        t+= "Fecha de Presentación en la C.A.: " +  fechaConFormato(this.fechaPresentacion)+"\n";
-        t+="Fecha de Aprobacion: " +  fechaConFormato(this.fechaAprobacion)+"\n";
-        t+="Fecha de Exposición Final: " +  fechaConFormato(this.fechaFinalización)+"\n";
-        System.out.println(t);
-    }
-    public void mostrarDetallado(){
+//      String t ;
+//        t= "Trabajo: " + this.titulo + "\n";
+//        t+= "Area(s): " + this.areas() + "\n";
+//        t+="Duración: " + this.duracion + " meses \n";
+//        t+= "Fecha de Presentación en la C.A.: " +  fechaConFormato(this.fechaPresentacion)+"\n";
+//        t+="Fecha de Aprobacion: " +  fechaConFormato(this.fechaAprobacion)+"\n";
+//        t+="Fecha de Exposición Final: " +  fechaConFormato(this.fechaFinalización)+"\n";
+        System.out.println(this);
+//    }
+//    public void mostrarDetallado(){
         System.out.print("***********************************\n");
        // System.out.println(this);
-        this.mostrar();
+//        this.mostrar();
         
         System.out.println("Alumnos");
         System.out.println("-----------------------");
