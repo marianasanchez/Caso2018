@@ -192,6 +192,15 @@ public class Principal {
         else
             System.out.println("NO se agregó el alumno 11");
         
+        Persona prof99= new Profesor("Apellido Prof","Nombre Prof", 14, Cargo.TITULAR); 
+        if(!listaPersonas.contains(prof99)) {
+            listaPersonas.add(prof99);
+            System.out.println("Se agregó el prof 99");
+        }// NO debería poder agregarlo
+        else
+            System.out.println("NO se agregó el prof 99");
+        
+        
         System.out.println("\n*** Lista de Personas *** \n ");
         for(Persona p: listaPersonas)
             System.out.println(p);
@@ -554,7 +563,6 @@ public class Principal {
         else 
              System.out.println("No se creó el trabajo 12");
     //</editor-fold> 
-        
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 13">  
         System.out.println("\n*** Trabajo 13 - No Debería Agregar, lista de Alumnos vacía *** \n ");
         // TRABAJO 13 NO lo Agrega
@@ -588,7 +596,6 @@ public class Principal {
         else 
              System.out.println("No se creó el trabajo 13");
     //</editor-fold> 
-        
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 14">  
         System.out.println("\n*** Trabajo 14 - No Debería Agregar, lista de jurados con menos de 3 *** \n ");
         // TRABAJO 14 NO lo Agrega

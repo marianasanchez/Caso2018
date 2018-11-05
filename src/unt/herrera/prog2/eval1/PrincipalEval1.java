@@ -206,7 +206,8 @@ public class PrincipalEval1 {
             if(p instanceof Alumno)
                 System.out.println(p);
         System.out.println("\n\n");
-        
+        //</editor-fold> 
+        //***************************fechas**********************************
         //FECHAS para crear los trabajos y otros
         LocalDate fecha1 = LocalDate.of(2017, 10, 2);
         LocalDate fechaVacia = null; 
@@ -214,10 +215,11 @@ public class PrincipalEval1 {
         LocalDate fecha4= LocalDate.of(2017, 8, 12);
         LocalDate fecha5= LocalDate.of(2017, 9, 12);
         LocalDate fecha6= LocalDate.of(2017, 10, 2);
-        //</editor-fold> 
+        
         //***************************TRABAJOS**********************************
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 1">  
-        System.out.println("\n*** Trabajo 1 *** \n ");
+        //TRABAJO 1 LO AGREGA
+        System.out.println("\n*** Trabajo 1 - Lo Agrega*** \n ");
         ArrayList<AlumnoEnTrabajo> listaAeT = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaRT = new ArrayList<>();
         //Alumnos en el Trabajo
@@ -230,7 +232,7 @@ public class PrincipalEval1 {
         listaRT.add(rt11);
         RolEnTrabajo rt12= new RolEnTrabajo(fecha1, (Profesor)listaPersonas.get(1), Rol.COTUTOR);
         listaRT.add(rt12);
-        //Trabajo trab1 = new Trabajo ("Protocolos de comunicación", listaA1,6, fecha1, listaAeT, listaRT);
+        
         Trabajo trab1= nuevoTrabajo("Protocolos de comunicación", listaA1,6, fecha1,fechaVacia, listaAeT, listaRT);
         if(trab1!= null){
             if(!listaTrabajos.contains(trab1)) {
@@ -244,8 +246,8 @@ public class PrincipalEval1 {
             System.out.println("No se creó el trabajo 1");
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 2">  
-        System.out.println("\n*** Trabajo 2 *** \n ");
-        //TRABAJO 2 
+        System.out.println("\n*** Trabajo 2  - Lo Agrega*** \n ");
+        //TRABAJO 2 - agrega
         ArrayList<AlumnoEnTrabajo> listaAeT2 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaRT2 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -256,7 +258,7 @@ public class PrincipalEval1 {
         //Profesores en el Trabajo
         RolEnTrabajo rt21= new RolEnTrabajo(fecha1, (Profesor)listaPersonas.get(3), Rol.TUTOR);
         listaRT2.add(rt21);
-        //Trabajo trab2 = new Trabajo ("Gestión de Trabajos Finales", listaA2,8, fecha1, listaAeT2, listaRT2);
+        
         Trabajo trab2= nuevoTrabajo("Gestión de Trabajos Finales", listaA2,8, fecha1,fechaVacia, listaAeT2, listaRT2);
         if(trab2!= null){
             if(!listaTrabajos.contains(trab2)) {
@@ -271,7 +273,8 @@ public class PrincipalEval1 {
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 3">  
        //TRABAJO 3 
-        System.out.println("\n*** Trabajo 3 *** \n ");
+       //TRABAJO 3 LO AGREGA
+        System.out.println("\n*** Trabajo 3 - Lo agrega*** \n ");
         ArrayList<AlumnoEnTrabajo> listaAeT3 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaRT3 = new ArrayList<>();
         //Alumnos en el Trabajo
@@ -280,7 +283,7 @@ public class PrincipalEval1 {
         //Profesores en el Trabajo
         RolEnTrabajo rt31= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(0), Rol.TUTOR);
         listaRT3.add(rt31);
-        //Trabajo trab3 = new Trabajo ("Este es el titulo del Trabajo", listaA3,4, fecha4, listaAeT3, listaRT3);
+        
         Trabajo trab3= nuevoTrabajo("Este es el titulo del Trabajo", listaA3,4, fecha4,fechaVacia, listaAeT3, listaRT3);;
         if(trab2!= null){
             if(!listaTrabajos.contains(trab3)) {
@@ -295,8 +298,8 @@ public class PrincipalEval1 {
 //        
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 4">  
-        //TRABAJO 4  NO LO AGREGA
-        System.out.println("\n*** Trabajo 4 *** \n ");
+        //TRABAJO 4  NO LO AGREGA, trabajo repetido
+        System.out.println("\n*** Trabajo 4 - No debería agregar, trabajo repetido*** \n ");
         ArrayList<AlumnoEnTrabajo> listaAeT4 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaRT4 = new ArrayList<>();
         //Alumnos en el Trabajo
@@ -306,7 +309,7 @@ public class PrincipalEval1 {
         //Profesores en el Trabajo
         RolEnTrabajo rt41= new RolEnTrabajo(fecha5,(Profesor)listaPersonas.get(4), Rol.TUTOR);
         listaRT4.add(rt41);
-        //Trabajo trab4 = new Trabajo ("Este es el titulo del Trabajo", listaA1,5, fecha5, listaAeT4, listaRT4);
+        
          Trabajo trab4= nuevoTrabajo("Este es el titulo del Trabajo", listaA1,5, fecha5,fechaVacia, listaAeT4, listaRT4);;
         if(trab2!= null){
             if(!listaTrabajos.contains(trab4)) {
@@ -323,7 +326,7 @@ public class PrincipalEval1 {
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 5">  
         //*************************
         // TRABAJO 5 NO SE AGREGA PORQUE TIENE IGUAL TITULO
-        System.out.println("\n*** Trabajo 5 *** \n ");
+        System.out.println("\n*** Trabajo 5 - No debería agregar, trabajo repetido *** \n ");
         ArrayList<AlumnoEnTrabajo> listaAl5 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR5 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -335,7 +338,7 @@ public class PrincipalEval1 {
         RolEnTrabajo rt51= new RolEnTrabajo(fecha1, (Profesor)listaPersonas.get(3), Rol.TUTOR);
         listaR5.add(rt51);
         LocalDate fechaAp= null;
-        //Trabajo trab2 = new Trabajo ("Gestión de Trabajos Finales", listaA2,8, fecha1, listaAeT2, listaRT2);
+        
         Trabajo t5= nuevoTrabajo("Gestión de Trabajos Finales", listaA2,8, fecha1, fechaAp, listaAl5, listaR5);
         if (t5!=null){
             if(!listaTrabajos.contains(t5)) {
@@ -345,9 +348,11 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 5");
         }
+        else 
+             System.out.println("No se creó el trabajo 5");
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 6">  
-        System.out.println("\n*** Trabajo 6 *** \n ");
+        System.out.println("\n*** Trabajo 6 - No debería agregar. título vacío *** \n ");
         // TRABAJO 6 NO SE AGREGA PORQUE NO SE PUEDE CREAR, TITULO VACIO
         ArrayList<AlumnoEnTrabajo> listaAl6 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR6 = new ArrayList<>();
@@ -363,7 +368,7 @@ public class PrincipalEval1 {
         RolEnTrabajo rt61= new RolEnTrabajo(fecha1, (Profesor)listaPersonas.get(3), Rol.TUTOR);
         listaR6.add(rt61);
         LocalDate fechaAp6= null;
-        //Trabajo trab2 = new Trabajo ("Gestión de Trabajos Finales", listaA2,8, fecha1, listaAeT2, listaRT2);
+   
         Trabajo t6= nuevoTrabajo("", listaA2,5, fecha1, fechaAp6, listaAl6, listaR6);
         if (t6!=null){
             if(!listaTrabajos.contains(t6)) {
@@ -373,9 +378,11 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 6");
         }
+        else 
+             System.out.println("No se creó el trabajo 6");
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 7">  
-        System.out.println("\n*** Trabajo 7 *** \n ");
+        System.out.println("\n*** Trabajo 7- No debería agregar, duracion <0  *** \n ");
         // TRABAJO 7, duracion negativa
         ArrayList<AlumnoEnTrabajo> listaAl7 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR7 = new ArrayList<>();
@@ -396,10 +403,13 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 7");
         }
+        else 
+             System.out.println("No se creó el trabajo 7");
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 8">  
-        System.out.println("\n*** Trabajo 8 *** \n ");
+        System.out.println("\n*** Trabajo 8  - No deberia agregar fechaPres > fechaAp*** \n ");
         // TRABAJO 8
+        //TRABAJO 8 NO  LO AGREGA fecha3> fecha1
         ArrayList<AlumnoEnTrabajo> listaAl8 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR8 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -419,10 +429,12 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 8");
         }
+        else 
+             System.out.println("No se creó el trabajo 8");
         //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 9">  
-        System.out.println("\n*** Trabajo 9 *** \n ");
-        // TRABAJO 9 
+        System.out.println("\n*** Trabajo 9 - Debería Agregar *** \n ");
+        // TRABAJO 9 Se agrega
         ArrayList<AlumnoEnTrabajo> listaAl9 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR9 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -445,10 +457,12 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 9");
         }
+        else 
+             System.out.println("No se creó el trabajo 9");
     //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 10">  
-        System.out.println("\n*** Trabajo 10 *** \n ");
-        // TRABAJO 10
+        System.out.println("\n*** Trabajo 10 - Debería Agregar  *** \n ");
+        // TRABAJO 10 Se Agrega
         ArrayList<AlumnoEnTrabajo> listaAl10 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR10 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -471,10 +485,12 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 10");
         }
+        else 
+             System.out.println("No se creó el trabajo 10");
     //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 11">  
-        System.out.println("\n*** Trabajo 11 *** \n ");
-        // TRABAJO 10
+        System.out.println("\n*** Trabajo 11 - No deberia agregar - Alumnos repetidos *** \n ");
+        // TRABAJO 10 NO lo Agrega los alumnos son iguales
         ArrayList<AlumnoEnTrabajo> listaAl11 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR11 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -503,10 +519,12 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 11");
         }
+        else 
+             System.out.println("No se creó el trabajo 11");
     //</editor-fold> 
         //<editor-fold defaultstate="collapsed"  desc="TRABAJO 12">  
-        System.out.println("\n*** Trabajo 12 *** \n ");
-        // TRABAJO 12
+        System.out.println("\n*** Trabajo 12 - Debería Agregar  *** \n ");
+        // TRABAJO 12 lo Agrega
         ArrayList<AlumnoEnTrabajo> listaAl12 = new ArrayList<>();
         ArrayList<RolEnTrabajo> listaR12 = new ArrayList<>();
         //Alumnos en el Trabajo    
@@ -533,155 +551,132 @@ public class PrincipalEval1 {
             else
                 System.out.println("No se agregó el trabajo 12");
         }
+        else 
+             System.out.println("No se creó el trabajo 12");
     //</editor-fold> 
+        //<editor-fold defaultstate="collapsed"  desc="TRABAJO 13">  
+        System.out.println("\n*** Trabajo 13 - No Debería Agregar, lista de Alumnos vacía *** \n ");
+        // TRABAJO 13 NO lo Agrega
+        ArrayList<AlumnoEnTrabajo> listaAl13 = new ArrayList<>();
+        ArrayList<RolEnTrabajo> listaR13 = new ArrayList<>();
+        //Alumnos en el Trabajo    
+        //Profesores en el Trabajo
+        RolEnTrabajo rt131= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(3), Rol.TUTOR);
+        RolEnTrabajo rt133= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(0), Rol.JURADO);
+        RolEnTrabajo rt134= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(1), Rol.JURADO);
+        RolEnTrabajo rt135= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(2), Rol.JURADO);
+        
+        listaR13.add(rt131);
+        listaR13.add(rt133);
+        listaR13.add(rt134);
+        listaR13.add(rt135);
+        
+        Trabajo t13= nuevoTrabajo("Trabajo Nro 13", listaA3,4, fecha4, fecha1, listaAl13, listaR13);
+        if (t13!=null){
+            if(!listaTrabajos.contains(t13)) {
+                listaTrabajos.add(t13);
+                System.out.println("Se agregó el trabajo 13");
+            }
+            else
+                System.out.println("No se agregó el trabajo 13");
+        }
+        else 
+             System.out.println("No se creó el trabajo 13");
+    //</editor-fold> 
+        //<editor-fold defaultstate="collapsed"  desc="TRABAJO 14">  
+        System.out.println("\n*** Trabajo 14 - No Debería Agregar, lista de jurados con menos de 3 *** \n ");
+        // TRABAJO 14 NO lo Agrega
+        ArrayList<AlumnoEnTrabajo> listaAl14 = new ArrayList<>();
+        ArrayList<RolEnTrabajo> listaR14 = new ArrayList<>();
+        //Alumnos en el Trabajo    
+        AlumnoEnTrabajo a141 = new AlumnoEnTrabajo(fecha4, (Alumno)listaPersonas.get(10));
+        AlumnoEnTrabajo a142 = new AlumnoEnTrabajo(fecha4, (Alumno)listaPersonas.get(7));
+        listaAl14.add(a141);
+        listaAl14.add(a142);
+        //Profesores en el Trabajo
+        RolEnTrabajo rt141= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(3), Rol.TUTOR);
+        RolEnTrabajo rt143= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(0), Rol.JURADO);
+        RolEnTrabajo rt144= new RolEnTrabajo(fecha4, (Profesor)listaPersonas.get(1), Rol.JURADO);
+        
+        listaR14.add(rt141);
+        listaR14.add(rt143);
+        listaR14.add(rt144);
+        
+        Trabajo t14= nuevoTrabajo("Trabajo Nro 14", listaA1,4, fecha4, fecha1, listaAl14, listaR14);
+        if (t14!=null){
+            if(!listaTrabajos.contains(t14)) {
+                listaTrabajos.add(t14);
+                System.out.println("Se agregó el trabajo 14");
+            }
+            else
+                System.out.println("No se agregó el trabajo 14");
+        }
+        else 
+             System.out.println("No se creó el trabajo 14");
+    //</editor-fold> 
+        //<editor-fold defaultstate="collapsed"  desc="TRABAJO 15">  
+        System.out.println("\n*** Trabajo 15 - No Debería Agregar, lista de jurados repetidos *** \n ");
+        // TRABAJO 14 NO lo Agrega
+        ArrayList<AlumnoEnTrabajo> listaAl15 = new ArrayList<>();
+        ArrayList<RolEnTrabajo> listaR15 = new ArrayList<>();
+        //Alumnos en el Trabajo    
+        AlumnoEnTrabajo a151 = new AlumnoEnTrabajo(fecha4, (Alumno)listaPersonas.get(10));
+        AlumnoEnTrabajo a152 = new AlumnoEnTrabajo(fecha4, (Alumno)listaPersonas.get(7));
+        listaAl15.add(a151);
+        listaAl15.add(a152);
+        //Profesores en el Trabajo
+              
+        Trabajo t15= nuevoTrabajo("Trabajo Nro 14", listaA1,4, fecha4, fecha1, listaAl14, listaR14);
+        if (t15!=null){
+            if(!listaTrabajos.contains(t15)) {
+                listaTrabajos.add(t15);
+                System.out.println("Se agregó el trabajo 15");
+            }
+            else
+                System.out.println("No se agregó el trabajo 15");
+        }
+        else 
+             System.out.println("No se creó el trabajo 15");
+    //</editor-fold> 
+        
         System.out.println("\n*** LISTA DE TRABAJOS *** \n ");
         for (Trabajo t : listaTrabajos)
             t.mostrar();
         
         
+       
     } 
     public static Trabajo nuevoTrabajo(String titulo, ArrayList<Area> areas,int duracion,
             LocalDate fechaPresentacion,LocalDate fechaAprobacion ,
             ArrayList<AlumnoEnTrabajo> listaAlumnoEnT, ArrayList<RolEnTrabajo> listaRolEnT){
         
         Trabajo t=null;
-        String mensaje="";
-        boolean tieneTituloYDuracion;
-        boolean tieneAreas;
-        boolean tieneFechasValidas;
-        boolean tieneAlumnosValidos, tieneTutoresValidos, tieneJuradosValidos;
-        //controlo los datos principales
-        tieneTituloYDuracion=controlarTituloYDuracion(titulo, duracion);
-        tieneAreas=controlarAreas(areas);
-        tieneFechasValidas= controlarFechas(fechaPresentacion, fechaAprobacion);
-        //control de alumnos
-        tieneAlumnosValidos= controlarAlumnos(listaAlumnoEnT);
-        //control tutores
-        tieneTutoresValidos= controlarTutores(listaRolEnT);
-        //control jurados
-        tieneJuradosValidos= controlarJurados(listaRolEnT);
-        
-        boolean datosValidos = tieneTituloYDuracion && tieneAreas && tieneFechasValidas;
-        datosValidos = datosValidos && tieneAlumnosValidos && tieneTutoresValidos && tieneJuradosValidos;
-        
-        if(datosValidos){
-            if(fechaAprobacion ==null ) {
-                t=new Trabajo(titulo, areas, duracion,fechaPresentacion, listaAlumnoEnT , listaRolEnT);
-                System.out.println("Se creo el trabajo (constructor 1)");
-                }
-            else {
-                t=new Trabajo(titulo, areas, duracion,fechaPresentacion, fechaAprobacion, listaAlumnoEnT , listaRolEnT);
-                System.out.println("Se creo el trabajo (constructor 2)");
-            }
-        }
-        else
-            mensaje = "No se creo el trabajo: " + mensaje;
-    System.out.println(mensaje);
-    return t;
+        //implementar aquí lo que se solicita
+        return t;
     }
     
     private static boolean controlarTituloYDuracion(String titulo, int duracion){
-        if(titulo.isEmpty() || titulo== null || duracion <=0 )
-            return false;
+        //implementar
         return true;
     }
     private static boolean controlarAreas(ArrayList<Area> areas){
-        if(areas.isEmpty()|| areas ==null)
-            return false;
+        //implementar
         return true;
     }
     private static boolean controlarFechas(LocalDate fechaPresentacion, LocalDate fechaAprobacion){
-        if(fechaPresentacion ==null)
-            return false;
-        else
-            if(fechaAprobacion==null) //fechaPresentacion no es vacia
-                return true;
-            else 
-                return (fechaAprobacion.isAfter(fechaPresentacion)|| fechaAprobacion.equals(fechaPresentacion));
+        //implementar
+        return true;
     }
     private static boolean controlarAlumnos (ArrayList<AlumnoEnTrabajo> listaA){
-        if(!listaA.isEmpty()&& listaA != null){
-            for(int i = 0; i < listaA.size() - 1; i++) { 
-                    Alumno a1 = listaA.get(i).getUnAlumno();
-                    for(int j = i + 1; j < listaA.size(); j++) {
-                        Alumno a2 = listaA.get(j).getUnAlumno();
-                            if (a1.equals(a2))
-                                return false;
-                    }
-            }
-        }
+     //implementar
         return true;
     }
     private static boolean controlarTutores (ArrayList<RolEnTrabajo> listaR){
-        int cantTutor=0, cantCotutor=0;
-        Profesor t=null, c=null;
-        //que la lista tenga datos
-        if(listaR.isEmpty()|| listaR == null)
-            return false;
-        else
-        {
-            for(RolEnTrabajo rt : listaR){
-                if(rt.getUnRol()== Rol.TUTOR){
-                    cantTutor++;
-                    t= rt.getUnProfesor();
-                }
-                if(rt.getUnRol()== Rol.COTUTOR){
-                    cantTutor++;
-                    c=rt.getUnProfesor();
-                }
-                
-            }
-            //que haya las cantidades que requiere
-            if(cantTutor ==0 || cantTutor >1)
-                return false;
-            if(cantCotutor>1)
-                return false;
-            //que no sean iguales
-            if(cantCotutor==1 && c.equals(t))
-                return false;                    
-        }
+        //implementar
         return true;
     }
     private static boolean controlarJurados (ArrayList<RolEnTrabajo> listaR){
-        Profesor tutor=null, coTutor=null;
-        Profesor p1=null, p2=null, p3=null;
-        ArrayList<Profesor> listaJurado = new ArrayList<>();
-        //que la lista tenga datos
-        if(listaR.isEmpty()|| listaR == null) // la lista es vacia
-            return false;
-        else
-        {
-            for(RolEnTrabajo rt : listaR){
-                if(rt.getUnRol()== Rol.JURADO){
-                    listaJurado.add(rt.getUnProfesor());
-                }
-            }    
-            if(listaJurado.size()==3)
-            {
-                //tomo tutor cotutor y externo
-                for(RolEnTrabajo rt : listaR){
-                    if(rt.getUnRol()== Rol.TUTOR)
-                        tutor= rt.getUnProfesor();
-                    if(rt.getUnRol()== Rol.COTUTOR)
-                        coTutor=rt.getUnProfesor();
-                }
-
-                //que no sean iguales con los tutores y cotutores
-                if(listaJurado.contains(tutor))
-                    return false;
-                if(coTutor !=null)
-                    if(listaJurado.contains(coTutor) )
-                        return false;
-                
-                //que no sean iguales entre si
-                p1 = listaJurado.get(0);
-                p2 = listaJurado.get(1);
-                p3 = listaJurado.get(2);
-                if (p1.equals(p2) && p1.equals(p3) && p2.equals(p3))
-                    return false;
-            }
-        }
-        
+        //implementar
         return true;
     }
 }
